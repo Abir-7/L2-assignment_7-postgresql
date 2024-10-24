@@ -2,7 +2,7 @@
 
 
 --database create
-CREATE DATABASE university_db
+CREATE DATABASE university_db;
 
 
 --create student table
@@ -14,14 +14,14 @@ CREATE TABLE students (
     frontend_mark INT NOT NULL ,
     backend_mark INT NOT NULL,
     status VARCHAR(20)  
-)
+);
 
 --create course table
 CREATE TABLE courses (
     course_id SERIAL PRIMARY KEY,
     course_name VARCHAR(100) NOT NULL,
     credits INT CHECK (credits > 0)
-)
+);
 
 --create enrollment table
 CREATE TABLE enrollment (
@@ -58,21 +58,21 @@ VALUES
 
 
 --get student table data
-SELECT * FROM students
+SELECT * FROM students;
 
 --get course table data
-SELECT * from courses
+SELECT * from courses;
 
 --get enrollment table data
-SELECT * FROM  enrollment
+SELECT * FROM  enrollment;
 
 
 --drop table command
-DROP TABLE students
+DROP TABLE students;
 
-DROP TABLE courses
+DROP TABLE courses;
 
-DROP TABLE enrollment
+DROP TABLE enrollment;
 
 
 
