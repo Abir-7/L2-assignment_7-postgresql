@@ -87,7 +87,7 @@ VALUES
 SELECT student_name FROM students
 JOIN enrollment ON students.student_id=enrollment.student_id
 JOIN courses ON   enrollment.course_id=courses.course_id
-WHERE course_name='Next.js'
+WHERE course_name='Next.js';
 
 -- query-3: Update the status of the student with the highest total (frontend_mark + backend_mark) to 'Awarded'
 UPDATE students 
@@ -110,7 +110,7 @@ where course_id IN(SELECT courses.course_id
 SELECT student_name
 FROM students
 ORDER BY student_id
-OFFSET 2 LIMIT 2
+OFFSET 2 LIMIT 2;
 
 -- query-6: Retrieve the course names and the number of students enrolled in each course.
 SELECT course_name, COUNT(e.student_id) AS number_of_students
@@ -119,9 +119,9 @@ LEFT JOIN enrollment e ON c.course_id = e.course_id
 GROUP BY c.course_id, c.course_name;
 
 -- query-7: Calculate and display the average age of all students.
-SELECT  ROUND(AVG(age), 2) FROM students
+SELECT  ROUND(AVG(age), 2) FROM students;
 
 -- query-8: Retrieve the names of students whose email addresses contain 'example.com'.
 SELECT student_name,email
 FROM students
-WHERE email LIKE '%example.com%'
+WHERE email LIKE '%example.com%';
