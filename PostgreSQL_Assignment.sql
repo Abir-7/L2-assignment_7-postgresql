@@ -75,6 +75,9 @@ DROP TABLE courses
 DROP TABLE enrollment
 
 
+
+
+
 -- query-1: insert single data in student table
 INSERT INTO students (student_name, age, email, frontend_mark, backend_mark, status)
 VALUES
